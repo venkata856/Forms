@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
     <title>Form</title>
     
 </head>
@@ -19,10 +20,26 @@
             </p>
         </div>
         <div class="form-section">
-            <form>
-                <input type="text" id="name">
-                <input type="tel" id="phone">
+            <div class="header">
+                <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up <em>now</em> to get started.</p>
+                <p>You <em>know</em> you want to.</p>
+            </div>
+            <div class="form">
+                <p>Let's do this!</p>
+            <form id="my-form">
+                <label for="firstName">FIRST NAME<div><input type="text" id="firstName" required minlength="2" maxlength="24"></div></label>
+                <label for="firstName">LAST NAME<div><input type="text" id="lastName" required minlength="2" maxlength="24"></div></label>
+                <label for="email">EMAIL<div><input type="email" id="email" required></div></label>
+                <label for="telephone">PHONE NUMBER<div><input type="tel" id="telephone" required pattern="[0-9]{10}"></div></label>
+                <label for="password">PASSWORD<div><input type="password" class="error" id="password" required minlength="8" maxlength="24"><p class="error-display">*Password do not match</p></div></label>
+                <label for="confirm-password">CONFIRM PASSWORD<div><input type="password" class="error" id="confirm-password" required minlength="8" maxlength="24"></div></label>
+                
             </form>
+        </div>
+        <div class="submit-content">
+            <button type="submit" class="submit" form="my-form">Create Account</button>
+            <p>Already have an Account? <a href="#" id="login">Log in</a></p>
+        </div>
         </div>
     </div>
     
